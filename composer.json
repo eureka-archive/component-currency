@@ -1,0 +1,28 @@
+{
+  "name": "eureka/component-currency",
+  "description": "PHP currency library.",
+  "type": "library",
+  "license": "MIT",
+
+  "authors": [
+    {
+      "name": "Romain Cottard",
+      "email": "",
+      "role": "Developer"
+    }
+
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "Eureka\\Component\\Currency": "./"
+    }
+  },
+
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/velkuns/component-currency"
+    }
+  ]
+}
