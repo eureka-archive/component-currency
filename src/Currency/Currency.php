@@ -13,7 +13,6 @@ namespace Eureka\Component\Currency;
  * Currency class
  *
  * @author  Romain Cottard
- * @version 1.0.0
  */
 class Currency
 {
@@ -30,7 +29,7 @@ class Currency
     /**
      * Currency constructor.
      *
-     * @param float $amount
+     * @param float  $amount
      * @param string $currency
      */
     public function __construct($amount, $currency = '€')
@@ -50,12 +49,12 @@ class Currency
     }
 
     /**
-     * French number formating.
+     * French number formatting.
      *
      * @return mixed
      */
     public function format()
     {
-       return number_format($this->amount, 2, ',', ' ') . $this->currency;
+        return number_format($this->amount, 2, ',', ' ') . $this->currency;
     }
 }
