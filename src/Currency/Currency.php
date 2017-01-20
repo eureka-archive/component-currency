@@ -27,15 +27,22 @@ class Currency
     protected $currency = '€';
 
     /**
+     * @var int $round
+     */
+    protected $round = 2;
+
+    /**
      * Currency constructor.
      *
      * @param float  $amount
      * @param string $currency
+     * @param int $round
      */
-    public function __construct($amount, $currency = '€')
+    public function __construct($amount, $currency = '€', $round = 2)
     {
         $this->amount   = $amount;
         $this->currency = $currency;
+        $this->round    = $round;
     }
 
     /**
@@ -55,6 +62,6 @@ class Currency
      */
     public function format()
     {
-        return number_format($this->amount, 2, ',', ' ') . $this->currency;
+        return number_format($this->amount, $this->round, ',', ' ') . $this->currency;
     }
 }
